@@ -1,4 +1,4 @@
-# Prototypes <img align="right" src="https://github.com/Learning-Fuze/prototypes/blob/assets/assets/logos/LF_LOGO.png?raw=true" width="150">
+# Prototypes <img align="right" src="https://github.com/Learning-Fuze/prototypes_C7/blob/assets/assets/images/logos/LF_LOGO.png?raw=true" width="150">
 
 > This repo contains the prototypes that will be associated with each presentation given
 
