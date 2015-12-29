@@ -1,3 +1,7 @@
+li {
+    line-height: 1.75;
+}
+
 #page-header {
     position: relative;
 }
@@ -9,13 +13,18 @@
     right: 0px;
 }
 
-.panel-primary {
+.panel-info {
     border: none;
 }
 
-.panel .panel-heading {
+.panel-info .panel-heading {
     background-color: #fff;
     color: #19A6E0;
+}
+
+.panel-info .panel-heading:hover {
+    background-color: #19A6E0;
+    color: #fff;
 }
 
 .panel .panel-body a{
@@ -25,4 +34,37 @@
 .panel .nav-active {
     background-color: #19A6E0;
     color: #fff;
+}
+
+.center {
+    text-align: center;
+}
+
+.left-border {
+    border-left: 4px solid lightgray;
+    margin: 3%;
+}
+
+.normalize {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.8;
+}
+
+.nested-1 {
+    list-style-type: lower-roman;
+}
+
+.nested-2 {
+    list-style-type: lower-alpha;
+}
+
+.nested-3 {
+    list-style-type: number;
+}
+
+.code-body li img {
+    width: 45%;
+    margin: 5px 0 15px 2%;
+    box-shadow: 1px 1px 5px;
 }

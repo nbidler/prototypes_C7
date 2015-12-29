@@ -1,0 +1,207 @@
+<h1 class="center">{{ title }}</h1>
+
+<div class="panel panel-default" data-ng-if="view">
+    <div class="panel-heading">
+        <h2>Introduction &amp; Links</h2>
+    </div>
+    <div class="panel-body">
+        <h4>{{ description }}</h4>
+        <hr>
+        <ul>
+            <li data-ng-repeat="(key, val) in links">{{ key }}(s)
+                <ul>
+                    <li data-ng-repeat="(title, href) in val">{{ title }} - <a href="{{ href }}" target="_blank">{{ key }} Link</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="panel panel-default" data-ng-if="view">
+    <div class="panel-heading">
+        <h2>Code Setup Details</h2>
+    </div>
+    <div class="panel-body">
+        <ol>
+            <li class="h4">Open PHPStorm</li>
+            <li class="h4">Navigate to prototypes
+                <ul class="left-border normalize">
+                    <li>Insert this command in the terminal tab
+                        <ul>
+                            <li><code>cd prototypes</code> then press <kbd>Enter</kbd></li>
+                        </ul>
+                    </li>
+                    <li>This changes the directory to the prototypes folder</li>
+                    <li>If you get an error with the above command it's probably because you are already within the correct directory</li>
+                </ul>
+            </li>
+            <li class="h4">Create a feature grouping (<i>Create feature branch</i>)
+                <ul class="left-border normalize">
+                    <li>Insert &amp; execute these commands in the terminal tab individually
+                        <ul>
+                            <li><code>git checkout master</code> then press <kbd>Enter</kbd>
+                                <ul>
+                                    <li>The command above switches to the default branch</li>
+                                </ul>
+                            </li>
+                            <li><code>git pull https://github.com/Learning-Fuze/{{ repoName }}.git</code> then press <kbd>Enter</kbd>
+                                <ul>
+                                    <li>The command above downloads the newly posted prototypes and saves them to your local machine</li>
+                                </ul>
+                            </li>
+                            <li><code>git checkout -b {{ branch }}</code> then press <kbd>Enter</kbd>
+                                <ul>
+                                    <li>Creating this feature grouping allows users to modify code without causing issues with the current functioning code</li>
+                                    <li>Any modifications to these files after <b>branching</b> can be undone</li>
+                                    <li><b>"{{ branch }}"</b> is the branch name</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>Coding Instructions</h2>
+    </div>
+    <div class="panel-body">
+        <data-ng-transclude></data-ng-transclude>
+    </div>
+</div>
+
+<div class="panel panel-default" data-ng-if="view">
+    <div class="panel-heading">
+        <h2>After Coding Details</h2>
+    </div>
+    <div class="panel-body">
+        <ol>
+            <li class="h4">Save files to Git - Add all modified &amp; created files
+                <ul class="left-border normalize">
+                    <li>Run below command in the terminal tab</li>
+                    <ul>
+                        <li><code>git add .</code> then press <kbd>Enter</kbd></li>
+                    </ul>
+                    <li>Saving files to Git registers the changed files in Git, allowing them to be grouped together by a message (commit)</li>
+                </ul>
+            </li>
+            <li class="h4">Package (group) all saved git files with a commit message
+                <ul class="left-border normalize">
+                    <li>Run below command in the terminal tab
+                        <ul>
+                            <li><code>git commit -m "{{ branch }} - Eric Johnson"</code> then press <kbd>Enter</kbd>
+                                <ul>
+                                    <li><b>Eric Johnson</b> should be replaced with <b>your First &amp; Last name</b></li>
+                                    <li>Grouping files with a message allows those changes to be seen by others as a specific version of the code</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="h4">Allow others to see your changes by uploading them to the Github website
+                <ul class="left-border normalize">
+                    <li>Run below command in the terminal tab
+                        <ul>
+                            <li><code>git push origin {{ branch }}</code> then press <kbd>Enter</kbd>
+                                <ul>
+                                    <li>When running the code above, the Git application will send all commits <b>(groupings of saved files)</b> to the remote location <b>(https://github.com/[your-user-name]/{{ repoName }} - </b>indicated by <b>origin)</b>, specifically to the feature branch/group <b>{{ branch }}</b></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="h4">See if your feature fits with what everyone else was working on (Pull Request)
+                <ul class="left-border normalize">
+                    <h3>Step 4.1 Open your prototypes repo in the browser</h3>
+                    <ul>
+                        <li>The link should follow this format <b>https://github.com/[your-user-name]/prototypes</b></li>
+                    </ul>
+                    <hr>
+                    <h3>Step 4.2 Click <span class="label label-primary">Pull requests</span> tab to open the pull request list</h3>
+                    <img src="assets/images/github/pull-request-tab.png" alt="Pull request tab image" class="img-rounded img-responsive">
+                    <hr>
+                    <h3>Step 4.3 Click <span class="label label-success">New pull request</span> button</h3>
+                    <img src="assets/images/github/new-pull-request-btn.png" alt="New pull request button image" class="img-rounded img-responsive">
+                    <hr>
+                    <h3>Step 4.4 Compare Changes</h3>
+                    <p>During this step there are a hand full of highlighted things that need to be taken into consideration</p>
+                    <img src="assets/images/github/compare-changes.jpg" alt="Compare changes image" class="img-rounded img-responsive">
+                    <ol>
+                        <li><code>base fork: Learning-Fuze/{{ repoName }}</code>
+                            <ol>
+                                <li>For all prototypes this will always remain the same</li>
+                            </ol>
+                        </li>
+                        <li><code>base: C7_username</code>
+                            <ol>
+                                <li>Here you will select the option that matches <b>YOUR</b> username</li>
+                                <li>If you can not locate an option that has your username, contact an instructor</li>
+                            </ol>
+                        </li>
+                        <li><code>head fork: [your_user_name]/{{ repoName }}</code>
+                            <ol>
+                                <li>Here you will select the option that matches your username / {{ repoName }}</li>
+                                <li>If you can not locate an option that has your username / {{ repoName }}, contact an instructor</li>
+                            </ol>
+                        </li>
+                        <li><code>compare: {{ branch }}</code>
+                            <ol>
+                                <li>Here you will locate the branch name (or feature name) you created at the beginning of the prototype</li>
+                                <li>This will usually be the same as the name of the prototype</li>
+                            </ol>
+                        </li>
+                        <li>Github.com will let you know if the code can be merged automatically (without needing a manual merge)
+                            <ol>
+                                <li>If the text says soething other than "able to merge", <b>Contact an instructor</b></li>
+                                <li>Sometimes a manual merge is necessary, it just has a couple </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <hr>
+                    <h3>Step 4.5 Add details into the pull request</h3>
+                    <ol>
+                        <li>Give the pull request a title, by default it's the name of the last commit (package) message that was saved
+                            <ol class="nested-1">
+                                <li>If you set the commit message above, you should get <b>{{ branch }} - [your first &amp; last name]</b> already pre-populated in the <b>Title Field</b></li>
+                                <li>If there is a different title pre-populated, change the title to match the correct format:
+                                <ol class="nested-2">
+                                    <li><b>{{ branch }} - [your first &amp; last name]</b></li>
+                                </ol></li>
+                            </ol>
+                        </li>
+                        <li><b>Don't assign a user.</b> (An Instructor will select who this get assigned too)
+                            <ol class="nested-1">
+                                <li>Further into the cohort we will have students learn to review pull requests</li>
+                            </ol>
+                        </li>
+                        <li>Click on the <span class="label label-success">Create pull request</span> button</li>
+                    </ol>
+                    <img src="assets/images/github/create-pull-request.jpg" alt="Create pull request image" class="img-rounded img-responsive">
+                    <hr>
+                </ul>
+            </li>
+            <li class="h4">Collaborate on feedback
+                <ul class="left-border normalize">
+                    <li>Within the Github.com UI another developer or in this case an instructor will review the Pull Request you made - <b>Is your feature working.</b> Collaboration happens through Github UI &amp; the notifications are sent through email when when comments are added to pull requests.
+                        <ul>
+                            <li>Students should make modifications to their code based on the instructors feedback</li>
+                            <li>Instuctors will be giving an initial assessment based on the pull request. <b>Any additional collaboration after the instructor's initial feedback will be on a requested basis only.</b></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="h4">Pull request Closed
+                <ul class="left-border normalize">
+                    <li>In the LearningFuze workflow the pull requests are merged and closed to indicate assessment has been given to the student and recorded</li>
+                    <li>The pull request will be merged into your branch on the LearningFuze {{ repoName }} repo</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</div>
+
