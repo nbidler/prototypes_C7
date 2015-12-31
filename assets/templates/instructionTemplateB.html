@@ -1,11 +1,10 @@
 <h1 class="center">{{ title }}</h1>
-
 <div class="panel panel-default" data-ng-if="view">
     <div class="panel-heading">
         <h2>Introduction &amp; Links</h2>
     </div>
     <div class="panel-body">
-        <h4>{{ description }}</h4>
+        <p class="description">{{ description }}</p>
         <hr>
         <ul>
             <li data-ng-repeat="(key, val) in links">{{ key }}(s)
