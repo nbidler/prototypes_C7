@@ -19,20 +19,28 @@ li {
 
 .panel-info .panel-heading {
     background-color: #fff;
-    color: #19A6E0;
+    color: #3387cc;
 }
 
 .panel-info .panel-heading:hover {
-    background-color: #19A6E0;
+    background-color: #3387cc;
     color: #fff;
 }
 
 .panel .panel-body a{
-    color: #19A6E0;
+    color: #3387cc;
 }
 
 .panel .nav-active {
-    background-color: #19A6E0;
+    background-color: #3387cc;
+    color: #fff;
+}
+
+.subnav-active {
+    background-color: #34bbff;
+}
+
+.subnav-active a {
     color: #fff;
 }
 
@@ -57,10 +65,6 @@ li {
 
 .nested-2 {
     list-style-type: lower-alpha;
-}
-
-.nested-3 {
-    list-style-type: number;
 }
 
 .code-body li img {
