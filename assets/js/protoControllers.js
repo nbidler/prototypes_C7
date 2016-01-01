@@ -1,5 +1,6 @@
 //Prototype controllers
 
+//html_fundamentals_1
 app.controller('htmlFund1Controller', function(){
 
     this.title = 'HTML - Elements, Attributes and Comments';
@@ -36,6 +37,7 @@ app.controller('htmlFund1Controller', function(){
     }
 });
 
+//html_fundamentals_2
 app.controller('htmlFund2Controller', function() {
 
     this.title = 'HTML Fundamentals 2';
@@ -67,6 +69,41 @@ app.controller('htmlFund2Controller', function() {
         },
         'Feature Set 3 - Research': {
             html: "<ol class='left-border'><li>Using google, try to figure out how to do the following:</li><li>Add an inline style to the <b>Description</b> paragraph that will increase the spacing between each line of the paragraph (make sure your description takes up multiple lines so you can see the effect)</li><li>Add a border around the <b>Experience</b> Heading without a bottom border that is the color red</li><li>Add a border around the <b>Experience</b> paragraph without a top border that is black<ul><li>Make this border not solid</li></ul></li></ol>"
+        }
+    }
+});
+
+//html_fundamentals_3
+app.controller('htmlFund3Controller', function(){
+    this.title = "HTML Head - internal/external styles & links";
+    this.description = "Expand your HTML knowledge with better understanding of the head element and adding basic internal and external CSS styling. As you work through this prototype we will be building out aspects of the portfolio project v1 (Explanation Coming Soon). This prototype is based on the information that you obtained through the following resources (If you haven't gone through these then please do so now).";
+    this.branch = 'html_f3';
+
+    this.links = {
+        Reading: {
+            'HTML Head': 'http://www.w3schools.com/html/html_head.asp',
+            'HTML CSS': 'http://www.w3schools.com/html/html_css.asp'
+        },
+        Presentation: {
+            'HTML Formatting & HTML Styling': '#'
+        },
+        Video: {
+            'Head and Style Tags & CSS Intro': '#'
+        }
+    };
+
+    this.features = {
+        'Getting Started': {
+            html: "<ol class='left-border'><li>An <code>index.html</code> file has been included with this prototype and can be found in the <code>html_fundamentals_3</code> folder</li><li>Copy and paste your code from <code>html_fundamentals_2</code> into the index file for this prototype<ol class='nested-1'><li>Remove all of the inline styles from the elements (in this file only, <b>Do Not</b> alter the file from the previous prototype)</li></ol></li><li>Also included in the <code>html_fundamentals_3</code> folder is a <code>style.css</code> file that will be utilized in <i>Feature Set 3</i></li></ol>"
+        },
+        'Feature Set 1 - Head Elements': {
+            html: "<ol class='left-border'><li>Within the head tags<ol class='nested-1'><li>Add 3 meta tags:<ol class='nested-2'><li>description</li><li>keywords</li><li>author</li></ol></li><li>Add a title tag with the text: <code>My Portfolio</code><ol class='nested-2'><li>Bookmark your <code>index.html</code> page (In Chrome: click on the star located on the left side of the address bar</li><li>Note when you bookmark your page the title content will show up in the actual bookmark</li></ol><li>Add an external Google font<ol class='nested-2'><li><code>&lt;link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'&gt;</code></li><li>Here is example CSS on using the added Google font:<ul><li><code>font-family: 'Montserrat', sans-serif;</code></li></ul></li></ol></li><li>Add a link tag for the included style sheet<ul><li><code>style.css</code></li></ul></li><li>Add style tags</li></ol></li></ol>"
+        },
+        'Feature Set 2 - Adding Style': {
+            html: "<ol class='left-border'><li>Within the style tags<ol class='nested-1'><li>Make the <b>About Me</b> paragraph font size 12px</li><li>Italicize the skills header (with css)</li><li>Bold each skill title header but not the descriptions</li><li>Add the Google font family to the <b>Experience</b> header</li><li>Add a background color of green to the <b>Experience</b> paragraph</li><li>Change the <b>About Me</b> header text to your favorite color (other than black)</li></ol></li></ol>"
+        },
+        'Feature Set 3 - External Style Sheet': {
+            html: "<ol class='left-border'><li>Add a <code>h1</code> element to the top of your page, give it the text: <code>Welcome to [your name]'s Portfolio Page</code><ol class='nested-1'><li>Replace [your name] with YOUR name and without the brackets</li><li>Change all the section headers to <code>h2</code> tags</li></ol></li><li>In the external stylesheet - <code>style.css</code><ol class='nested-1'><li>Make all <code>h3</code> tags blue</li>    <li>Set all heading elements font to the included Google font</li></ol></li></ol>"
         }
     }
 });
