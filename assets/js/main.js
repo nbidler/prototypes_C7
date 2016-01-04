@@ -36,7 +36,7 @@ app.config(function($routeProvider){
            controller: 'mainController'
        })
        .when('/Example-1', {
-           templateUrl: 'assets/templates/FeatureSetsA.html',
+           templateUrl: 'assets/templates/featureSetsA.html',
            controller: 'exampleController',
            controllerAs: 'fs'
        })
