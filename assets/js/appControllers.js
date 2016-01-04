@@ -4,7 +4,7 @@ app.controller("mainController", function($rootScope, $scope){
 
     $scope.sideNav = {
         'Example': [
-            'Example'
+            'Example-1'
         ],
         'HTML': [
             'HTML-Fundamentals-1',

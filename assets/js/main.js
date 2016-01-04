@@ -32,7 +32,11 @@ app.config(function($routeProvider){
           controller: 'phpController'
        })
        .when('/Example', {
-           templateUrl: 'assets/templates/featureSetsA.html',
+           templateUrl: 'assets/templates/default.html',
+           controller: 'mainController'
+       })
+       .when('/Example-1', {
+           templateUrl: 'assets/templates/FeatureSetsA.html',
            controller: 'exampleController',
            controllerAs: 'fs'
        })
