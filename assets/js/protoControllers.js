@@ -1,11 +1,46 @@
 //Prototype controllers
 
+//Example
+app.controller('exampleController', function(){
+
+    this.title = 'Example Prototype';
+    this.description = "In this example we are going to walk through the process of working on a new prototype and the set of instructions that go with it.The instructions below are used for video recording reasons and are not used within the curriculum or being graded by the instructors."
+    this.branch = "html_ex";
+    this.instructType = 'A';
+
+    this.links = {
+        Reading: {
+            'Example Reading 1': 'http://www.w3schools.com/html/default.asp',
+            'Example Reading 2': 'http://www.w3schools.com/html/default.asp'
+        },
+        Presentation: {
+            'Example Slides 1': '#Example'
+        },
+        Video: {
+            'Example Prototype Video': '#Example'
+        }
+    };
+
+    this.features = {
+        'Getting Started': {
+            html: "<ul class='left-border'><li><h4><a href=''>Watch This Video First</a></h4></li><li>This prototype is for example purposes only</li><li><b>DO NOT</b> actually complete this prototype</li><li>Only watch the video</li></ul>"
+        },
+        'Feature Set 1 - HTML Basics': {
+            html: "<ol class='left-border'><li>Create a html file inside the example folder<ol class='nested-1'><li>Insert the basic HTML structure tags (html, head, body)<ul><li><i>Also know as a HTML skeleton</i></li></ul></li></ol></li><li>Add a header and <code>h1</code> tag with the text: <code>This is a test header</code></li><li>Add 5 content sections inside the appropriate tag to make a paragraph<ol class='nested-1'><li>inside the content sections add <i>Lorem Ipsum</i> text from here - <a href='http://www.lipsum.com/feed/html' target='_blank'>http://www.lipsum.com/feed/html</a><ul><li><a href='http://www.lipsum.com/' target='_blank'>What is Lorem Ipsum</a></li></ul></li></ol></li></ol>"
+        },
+        'Feature Set 2 - Basic Styling': {
+            html: "<ol class='left-border'><li>Make the font size of the h1 tag equal to 28 pixels</li><li>Add a class: <code>test-class</code> to the content sections</li><li>Italicize the font of the first paragraph tag</li></ol>"
+        }
+    }
+});
+
 //html_fundamentals_1
 app.controller('htmlFund1Controller', function(){
 
     this.title = 'HTML - Elements, Attributes and Comments';
     this.description = 'This is the first prototype and will be covering some basic HTML skills including elements, attributes and comments.';
     this.branch = 'html_f1';
+    this.instructType = 'A';
 
     this.links = {
         Presentation: {
@@ -43,6 +78,7 @@ app.controller('htmlFund2Controller', function() {
     this.title = 'HTML Fundamentals 2';
     this.description = "Expand your HTML knowledge with basic formatting elements and adding basic inline CSS styling. As you work through this prototype we will be building out aspects of the portfolio project v1 (Explanation Coming Soon). This prototype is based on the information that you obtained through the following resources (If you haven't gone through these then please do so now).";
     this.branch = 'html_f2';
+    this.instructType = 'B';
 
     this.links = {
         Reading: {
@@ -78,6 +114,7 @@ app.controller('htmlFund3Controller', function(){
     this.title = "HTML Head - internal/external styles & links";
     this.description = "Expand your HTML knowledge with better understanding of the head element and adding basic internal and external CSS styling. As you work through this prototype we will be building out aspects of the portfolio project v1 (Explanation Coming Soon). This prototype is based on the information that you obtained through the following resources (If you haven't gone through these then please do so now).";
     this.branch = 'html_f3';
+    this.instructType = 'B';
 
     this.links = {
         Reading: {

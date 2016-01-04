@@ -3,6 +3,9 @@ app.controller("mainController", function($rootScope, $scope){
     this.view = true;
 
     $scope.sideNav = {
+        'Example': [
+            'Example'
+        ],
         'HTML': [
             'HTML-Fundamentals-1',
             'HTML-Fundamentals-2',

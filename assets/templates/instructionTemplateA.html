@@ -1,3 +1,5 @@
+<h1>Template A</h1>
+
 <h1 class="center">{{ title }}</h1>
 <div class="panel panel-default" data-ng-if="view">
     <div class="panel-heading">
@@ -22,16 +24,48 @@
     </div>
     <div class="panel-body">
         <ol>
-            <li class="h4">Open PHPStorm</li>
-            <li class="h4">Navigate to prototypes
+            <li class="h4">Open PHPStorm
+                <ul class="left-border normalize code-body">
+                    <li>The <code>lfz</code> folder should be your main working directory</li>
+                    <img src="assets/images/github/lfz-folder.png" alt="lfz folder as working project directory" class="img-rounded img-responsive">
+                </ul>
+            </li>
+            <li class="h4">Fork Repository
+                <ol class="left-border nested-1 normalize">
+                    <li>Navigate to the LearningFuze {{repoName }} Repository in your browser - Found <a href="https://github.com/Learning-Fuze/{{ repoName }}" target="_blank">HERE</a></li>
+                    <li>Click on the <span class="label label-default">Fork</span> button located in the top right corner of the page
+                        <ul>
+                            <li>Forking the repository or Repo will give you a copy of this repo under your own GitHub user account. We will be starting with a Learning-Fuze account repo.</li>
+                        </ul>
+                    </li>
+                    <img src="assets/images/github/fork.jpg" alt="Image of fork button location on GitHub" class="img-rounded img-responsive">
+                </ol>
+            </li>
+            <li class="h4">Copy Locally (Clone the Repo)
+                <ol class="left-border normalize">
+                    <li>In phpStorm open the terminal window (if not already open)
+                        <ul>
+                            <li><b>On MAC:</b></li>
+                            <img src="assets/images/github/terminal-mac.png" alt="Image of how to open terminal in MAC" class="img-rounded img-responsive">
+                        </ul>
+                    </li>
+                    <li>In the terminal enter the following command: <code>git clone https://github.com/[your-user-name]/{{ repoName }}.git</code> press <kbd>Enter</kbd>
+                        <ul>
+                            <li><b>[your-user-name] should be replaced with your exact github account name</b></li>
+                            <li>Cloning a repository is making a copy of the repo that was forked on github.com/[your_account_name]/{{ repoName }} (in the step above) and saving it to your computer (Local Machine).</li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+            <li class="h4">Navigate to the {{ repoName }} folder in the terminal
                 <ul class="left-border normalize">
+                    <li><b>After you have forked then cloned the repo</b></li>
                     <li>Insert this command in the terminal tab
                         <ul>
                             <li><code>cd {{ repoName }}</code> then press <kbd>Enter</kbd></li>
                         </ul>
                     </li>
                     <li>This changes the directory to the prototypes folder</li>
-                    <li>If you get an error with the above command it's probably because you are already within the correct directory</li>
                 </ul>
             </li>
             <li class="h4">Create a feature grouping (<i>Create feature branch</i>)
@@ -168,9 +202,9 @@
                             <ol class="nested-1">
                                 <li>If you set the commit message above, you should get <b>{{ branch }} - [your first &amp; last name]</b> already pre-populated in the <b>Title Field</b></li>
                                 <li>If there is a different title pre-populated, change the title to match the correct format:
-                                <ol class="nested-2">
-                                    <li><b>{{ branch }} - [your first &amp; last name]</b></li>
-                                </ol></li>
+                                    <ol class="nested-2">
+                                        <li><b>{{ branch }} - [your first &amp; last name]</b></li>
+                                    </ol></li>
                             </ol>
                         </li>
                         <li><b>Don't assign a user.</b> (An Instructor will select who this get assigned too)
@@ -203,4 +237,3 @@
         </ol>
     </div>
 </div>
-

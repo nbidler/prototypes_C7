@@ -31,18 +31,23 @@ app.config(function($routeProvider){
           templateUrl: 'assets/templates/lang.html',
           controller: 'phpController'
        })
+       .when('/Example', {
+           templateUrl: 'assets/templates/featureSetsA.html',
+           controller: 'exampleController',
+           controllerAs: 'fs'
+       })
        .when('/HTML-Fundamentals-1', {
-          templateUrl: 'assets/templates/featureSets.html',
+          templateUrl: 'assets/templates/featureSetsA.html',
           controller: 'htmlFund1Controller',
           controllerAs: 'fs'
        })
        .when('/HTML-Fundamentals-2', {
-          templateUrl: 'assets/templates/featureSets.html',
+          templateUrl: 'assets/templates/featureSetsB.html',
           controller: 'htmlFund2Controller',
           controllerAs: 'fs'
        })
        .when('/HTML-Fundamentals-3', {
-           templateUrl: 'assets/templates/featureSets.html',
+           templateUrl: 'assets/templates/featureSetsB.html',
            controller: 'htmlFund3Controller',
            controllerAs: 'fs'
        })
