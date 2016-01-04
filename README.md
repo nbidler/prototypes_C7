@@ -1,5 +1,3 @@
 # Prototypes <img align="right" src="https://github.com/Learning-Fuze/prototypes_C7/blob/assets/assets/images/logos/LF_LOGO.png?raw=true" width="150">
 
-> This repo contains the prototypes that will be associated with each presentation given
-
-> All prototypes will build understanding to help complete the individual projects that will be built throughout the class
+> LearningFuze prototypes repository (Repo) is used to walk through small snippets of code to allow students to grasp concepts that were discussed in a presentation or walk through in class or during a remote session. The prototype repo has folders and within those folders are individualized README's that describe the steps to complete each prototype.
