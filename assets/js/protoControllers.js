@@ -45,7 +45,7 @@ app.controller('htmlFund1Controller', function(){
             'HTML Elements & Attributes': 'https://docs.google.com/presentation/d/1jHnfRkBVqiBw6GEa2mUR13fO468keu99NP_Befr8nmc/pub?start=false&loop=false&delayms=15000'
         },
         Video: {
-            'Coming Soon': '#'
+            'HTML Fundamentals - Elements, Attributes and Comments': 'http://portal.learningfuze.com/node/1736#overlay-context=class/1691/week'
         }
     };
 
@@ -82,10 +82,10 @@ app.controller('htmlFund2Controller', function() {
             'HTML Paragraphs': "http://www.w3schools.com/html/html_paragraphs.asp"
         },
         Presentation: {
-            'HTML Formatting & HTML Styling': '#'
+            'HTML Formatting & HTML Styling': 'https://docs.google.com/presentation/d/1_FMjUbUgJjMOroOlVG4wkkNO9tvgRDVQ7YS2dirDPEI/pub?start=false&loop=false&delayms=15000'
         },
         Video: {
-            'Text Formatting and Style': '#'
+            'Text Formatting and Basic Styles': 'http://portal.learningfuze.com/node/636'
         }
     };
 
