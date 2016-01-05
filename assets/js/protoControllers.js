@@ -74,7 +74,6 @@ app.controller('htmlFund2Controller', function() {
     this.title = ['HTML - Text Formatting & Styling', 'html_fundamentals_2'];
     this.description = "Expand your HTML knowledge with basic formatting elements and adding basic inline CSS styling. As you work through this prototype we will be building out aspects of the portfolio project v1 (Explanation Coming Soon). This prototype is based on the information that you obtained through the following resources (If you haven't gone through these then please do so now).";
     this.branch = 'html_f2';
-    this.instructType = 'B';
 
     this.links = {
         Reading: {

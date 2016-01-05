@@ -7,8 +7,8 @@ app.controller("mainController", function($rootScope, $scope){
             'Example-1'
         ],
         'HTML': [
-            'HTML-Fundamentals-1'
-            //'HTML-Fundamentals-2',
+            'HTML-Fundamentals-1',
+            'HTML-Fundamentals-2'
             //'HTML-Fundamentals-3'
         ]
     };

@@ -45,11 +45,11 @@ app.config(function($routeProvider){
           controller: 'htmlFund1Controller',
           controllerAs: 'fs'
        })
-       //.when('/HTML-Fundamentals-2', {
-       //   templateUrl: 'assets/templates/featureSetsB.html',
-       //   controller: 'htmlFund2Controller',
-       //   controllerAs: 'fs'
-       //})
+       .when('/HTML-Fundamentals-2', {
+          templateUrl: 'assets/templates/featureSetsB.html',
+          controller: 'htmlFund2Controller',
+          controllerAs: 'fs'
+       })
        //.when('/HTML-Fundamentals-3', {
        //    templateUrl: 'assets/templates/featureSetsB.html',
        //    controller: 'htmlFund3Controller',
