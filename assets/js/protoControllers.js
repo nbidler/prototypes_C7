@@ -1,7 +1,7 @@
 //Prototype controllers
 
 //Example
-app.controller('exampleController', function(){
+app.controller('exampleController', function($scope){
 
     this.title = ['Example Prototype', 'example_prototype'];
     this.description = "In this example we are going to walk through the process of working on a new prototype and the set of instructions that go with it.The instructions below are used for video recording reasons and are not used within the curriculum or being graded by the instructors."
@@ -30,7 +30,7 @@ app.controller('exampleController', function(){
         'Feature Set 2 - Basic Styling': {
             html: "<ol class='left-border'><li>Make the font size of the h1 tag equal to 28 pixels</li><li>Add a class: <code>test-class</code> to the content sections</li><li>Italicize the font of the first paragraph tag</li></ol>"
         }
-    }
+    };
 });
 
 //html_fundamentals_1
@@ -101,7 +101,7 @@ app.controller('htmlFund2Controller', function() {
         'Feature Set 3 - Research': {
             html: "<ol class='left-border'><li>Using google, try to figure out how to do the following:</li><li>Add an inline style to the <b>Description</b> paragraph that will increase the spacing between each line of the paragraph (make sure your description takes up multiple lines so you can see the effect)</li><li>Add a border around the <b>Experience</b> Heading without a bottom border that is the color red</li><li>Add a border around the <b>Experience</b> paragraph without a top border that is black<ul><li>Make this border not solid</li></ul></li></ol>"
         }
-    }
+    };
 });
 
 //html_fundamentals_3
@@ -126,7 +126,7 @@ app.controller('htmlFund3Controller', function(){
 
     this.features = {
         'Getting Started': {
-            html: "<ol class='left-border'><li>An <code>index.html</code> file has been included with this prototype and can be found in the <code>html_fundamentals_3</code> folder</li><li>Copy and paste your code from <code>html_fundamentals_2</code> into the index file for this prototype<ol class='nested-1'><li>Remove all of the inline styles from the elements (in this file only, <b>Do Not</b> alter the file from the previous prototype)</li></ol></li><li>Also included in the <code>html_fundamentals_3</code> folder is a <code>style.css</code> file that will be utilized in <i>Feature Set 3</i></li></ol>"
+            html: "<ol class='left-border'><li>In the terminal enter the following command:<ul><li><code>git checkout html_f2 html_fundamentals_2/index.html</code></li><li>The above command will pull the <code>index.html</code> file from your previous prototype</li></ul></li><li>An <code>index.html</code> file has been included with this prototype and can be found in the <code>html_fundamentals_3</code> folder</li><li>Copy and paste your code from <code>html_fundamentals_2</code> into the index file for this prototype<ol class='nested-1'><li>Remove all of the inline styles from the elements (in the new file only, <b>Do Not</b> alter the file from the previous prototype)</li></ol></li><li>Also included in the <code>html_fundamentals_3</code> folder is a <code>style.css</code> file that will be utilized in <i>Feature Set 3</i></li></ol>"
         },
         'Feature Set 1 - Head Elements': {
             html: "<ol class='left-border'><li>Within the head tags<ol class='nested-1'><li>Add 3 meta tags:<ol class='nested-2'><li>description</li><li>keywords</li><li>author</li></ol></li><li>Add a title tag with the text: <code>My Portfolio</code><ol class='nested-2'><li>Bookmark your <code>index.html</code> page (In Chrome: click on the star located on the left side of the address bar</li><li>Note when you bookmark your page the title content will show up in the actual bookmark</li></ol><li>Add an external Google font<ol class='nested-2'><li><code>&lt;link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'&gt;</code></li><li>Here is example CSS on using the added Google font:<ul><li><code>font-family: 'Montserrat', sans-serif;</code></li></ul></li></ol></li><li>Add a link tag for the included style sheet<ul><li><code>style.css</code></li></ul></li><li>Add style tags</li></ol></li></ol>"
@@ -137,5 +137,5 @@ app.controller('htmlFund3Controller', function(){
         'Feature Set 3 - External Style Sheet': {
             html: "<ol class='left-border'><li>Add a <code>h1</code> element to the top of your page, give it the text: <code>Welcome to [your name]'s Portfolio Page</code><ol class='nested-1'><li>Replace [your name] with YOUR name and without the brackets</li><li>Change all the section headers to <code>h2</code> tags</li></ol></li><li>In the external stylesheet - <code>style.css</code><ol class='nested-1'><li>Make all <code>h3</code> tags blue</li>    <li>Set all heading elements font to the included Google font</li></ol></li></ol>"
         }
-    }
+    };
 });

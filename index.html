@@ -33,9 +33,9 @@
 
     <div class="col-xs-12 col-md-3 col-lg-2 col-lg-offset-1 panel-group" id="accordion" data-ng-controller="navController as nc">
         <div class="panel panel-info" data-ng-repeat="name in nc.objKeys(sideNav)" data-ng-init="list = sideNav[name]">
-            <div class="panel-heading" data-ng-class="{'nav-active': nc.active == name}">
+            <div class="panel-heading" data-ng-class="{'nav-active': mc.active == name}">
                 <h3 class="panel-title">
-                    <a data-toggle="collapse" href="#{{ name }}" data-parent="#accordion" data-ng-click="nc.active=name; mc.subActive = ''">{{ name }}</a>
+                    <a id="{{ 'a_' + name }}" data-toggle="collapse" href="#{{ name }}" data-parent="#accordion" data-ng-click="mc.active = name; mc.subActive = ''">{{ name }}</a>
                 </h3>
             </div>
             <div id="{{ name }}" class="panel-collapse collapse">

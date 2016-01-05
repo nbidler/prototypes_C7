@@ -2,19 +2,20 @@ app.controller("mainController", function($rootScope, $scope){
     this.subActive = '';
     this.view = true;
 
+    this.active = '';
+
     $scope.sideNav = {
         'Example': [
             'Example-1'
         ],
         'HTML': [
             'HTML-Fundamentals-1',
-            'HTML-Fundamentals-2'
-            //'HTML-Fundamentals-3'
+            'HTML-Fundamentals-2',
+            'HTML-Fundamentals-3'
         ]
     };
 
 }).controller("navController", function($scope){
-    this.active = "";
 
     this.objKeys = function(obj){
         return Object.keys(obj);
