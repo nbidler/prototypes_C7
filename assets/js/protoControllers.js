@@ -36,7 +36,7 @@ app.controller('exampleController', function(){
 //html_fundamentals_1
 app.controller('htmlFund1Controller', function(){
 
-    this.title = 'HTML - Elements, Attributes and Comments';
+    this.title = ['HTML - Elements, Attributes and Comments', 'html_fundamentals_1'];
     this.description = 'This is the first prototype and will be covering some basic HTML skills including elements, attributes and comments.';
     this.branch = 'html_f1';
 

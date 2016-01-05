@@ -1,4 +1,4 @@
-<h1 class="center">{{ title }}</h1>
+<h1 class="center">{{ title[0] }}</h1>
 <div class="panel panel-default" data-ng-if="view">
     <div class="panel-heading">
         <h2>Introduction &amp; Links</h2>
@@ -130,7 +130,7 @@
                 <ul class="left-border normalize">
                     <li>Run below command in the terminal tab
                         <ul>
-                            <li><code>git commit -m "{{ branch }} - Eric Johnson"</code> then press <kbd>Enter</kbd>
+                            <li><code>git commit -m "{{ title[1] }} - Eric Johnson"</code> then press <kbd>Enter</kbd>
                                 <ul>
                                     <li><b>Eric Johnson</b> should be replaced with <b>your First &amp; Last name</b></li>
                                     <li>Grouping files with a message allows those changes to be seen by others as a specific version of the code</li>
@@ -205,7 +205,7 @@
                     <ol>
                         <li>Give the pull request a title, by default it's the name of the last commit (package) message that was saved
                             <ol class="nested-1">
-                                <li>If you set the commit message above, you should get <b>{{ branch }} - [your first &amp; last name]</b> already pre-populated in the <b>Title Field</b></li>
+                                <li>If you set the commit message above, you should get <b>{{ title[1] }} - [your first &amp; last name]</b> already pre-populated in the <b>Title Field</b></li>
                                 <li>If there is a different title pre-populated, change the title to match the correct format:
                                     <ol class="nested-2">
                                         <li><b>{{ branch }} - [your first &amp; last name]</b></li>
