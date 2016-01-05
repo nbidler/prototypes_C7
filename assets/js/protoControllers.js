@@ -3,7 +3,7 @@
 //Example
 app.controller('exampleController', function(){
 
-    this.title = 'Example Prototype';
+    this.title = ['Example Prototype', 'example_prototype'];
     this.description = "In this example we are going to walk through the process of working on a new prototype and the set of instructions that go with it.The instructions below are used for video recording reasons and are not used within the curriculum or being graded by the instructors."
     this.branch = "html_ex";
 
@@ -71,7 +71,7 @@ app.controller('htmlFund1Controller', function(){
 //html_fundamentals_2
 app.controller('htmlFund2Controller', function() {
 
-    this.title = 'HTML Fundamentals 2';
+    this.title = ['HTML - Text Formatting & Styling', 'html_fundamentals_2'];
     this.description = "Expand your HTML knowledge with basic formatting elements and adding basic inline CSS styling. As you work through this prototype we will be building out aspects of the portfolio project v1 (Explanation Coming Soon). This prototype is based on the information that you obtained through the following resources (If you haven't gone through these then please do so now).";
     this.branch = 'html_f2';
     this.instructType = 'B';
@@ -107,7 +107,7 @@ app.controller('htmlFund2Controller', function() {
 
 //html_fundamentals_3
 app.controller('htmlFund3Controller', function(){
-    this.title = "HTML Head - internal/external styles & links";
+    this.title = ["HTML Head - internal/external styles & links", "html_fundamentals_3"];
     this.description = "Expand your HTML knowledge with better understanding of the head element and adding basic internal and external CSS styling. As you work through this prototype we will be building out aspects of the portfolio project v1 (Explanation Coming Soon). This prototype is based on the information that you obtained through the following resources (If you haven't gone through these then please do so now).";
     this.branch = 'html_f3';
     this.instructType = 'B';
