@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div {
+            /*border: 1px solid black;*/
+            min-width: 1vw;
+            min-height: 1vh;
+        }
+        /*Set 1 + contained divs */
+        .feature_set_1_1 {
+            background-color: red;
+        }
+        .feature_set_1_1 div {
+            display: inline-block;
+            background-color: blue;
+            width: 25%;
+            margin-left: 5%;
+        }
+
+        /*Set 2 + contained divs */
+        .feature_set_1_2 {
+            background-color: blue;
+        }
+        .feature_set_1_2 div{
+            display: inline-block;
+            background-color: green;
+            width: 25vw;
+            border: 1px solid black;
+
+        }
+        .feature_set_1_2 div:first-of-type{
+            padding: 5vh 0vw 5vh;
+        }
+        .feature_set_1_2 div:nth-child(2){
+            padding: 5vh 5vw 0vh 0vw;
+        }
+        .feature_set_1_2 div:last-of-type{
+            padding: 1vh 2vw 3vh 4vw;
+        }
+        /*Set 3 + contained divs */
+        .feature_set_1_3 {
+            background-color: green;
+            height: 40px;
+        }
+        .feature_set_1_3 div{
+            display: inline-block;
+            background-color: red;
+            width: 100px;
+        }
+        .feature_set_1_3 div:first-of-type{
+            height: 25%;
+        }
+        .feature_set_1_3 div:nth-child(2){
+            height: 25vh;
+        }
+        .feature_set_1_3 div:last-of-type{
+            height: 25vmin;
+        }
+    </style>
+</head>
+<body>
+<div class="feature_set_1_1">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="feature_set_1_2">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="feature_set_1_3">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>
