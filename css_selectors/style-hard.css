@@ -3,8 +3,18 @@ header ul li{
     display: inline-block;
 }
 
-header ul ul {
+header ul li:hover{
+    background-color: grey;
+    color: white;
+}
 
+.collapsible ul{
+    background-color: black;
+    color: white;
+ }
+
+.collapsible ul li:hover{
+    background-color: grey;
 }
 
 section {
@@ -14,6 +24,7 @@ section {
 article {
     display: inline-block;
     width: 40%;
+    padding: 0px 1vw;
 }
 article img {
     float: left;
@@ -27,6 +38,7 @@ article img + p {
 aside {
     display: inline-block;
     width: 40%;
+    vertical-align: top;
 }
 aside h3 {
     text-align: center;
@@ -49,13 +61,15 @@ footer {
     clear:both;
     width: 100vw;
     height: 30vh;
+    position: relative;
     background-color: black;
 }
 
 footer div {
-    position: relative;
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     color: white;
 }
