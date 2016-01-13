@@ -3,6 +3,10 @@ header ul li{
     display: inline-block;
 }
 
+header ul ul {
+
+}
+
 section {
     width: 100vw;
 }
@@ -36,17 +40,22 @@ aside p:first-of-type {
     font-weight: bold;
     color: red;
 }
+aside p:last-of-type {
+    color: green;
+}
 
 /**/
 footer {
     clear:both;
+    width: 100vw;
+    height: 30vh;
+    background-color: black;
 }
 
 footer div {
-    width: 100vw;
-    height: 15vh;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     text-align: center;
-    background-color: black;
     color: white;
-    padding-top: 15vh;
 }
