@@ -1,0 +1,52 @@
+header ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+section {
+    width: 100vw;
+}
+/**/
+article {
+    display: inline-block;
+    width: 40%;
+}
+article img {
+    float: left;
+    width: 50%;
+    height: auto;
+}
+article img + p {
+    color: green;
+}
+/**/
+aside {
+    display: inline-block;
+    width: 40%;
+}
+aside h3 {
+    text-align: center;
+    position: relative;
+    top: 10%;
+}
+aside h3 span {
+    color: blue;
+}
+aside p:first-of-type {
+    font-weight: bold;
+    color: red;
+}
+
+/**/
+footer {
+    clear:both;
+}
+
+footer div {
+    width: 100vw;
+    height: 15vh;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-top: 15vh;
+}
