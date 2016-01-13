@@ -8,9 +8,16 @@ header ul li:hover{
     color: white;
 }
 
+.collapsible:hover ul{
+    background-color: black;
+    color: white;
+    display: block;
+}
+
 .collapsible ul{
     background-color: black;
     color: white;
+    display: none;
  }
 
 .collapsible ul li:hover{
