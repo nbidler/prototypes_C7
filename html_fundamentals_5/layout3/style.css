@@ -1,0 +1,24 @@
+#title {
+    height: 15vh;
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    background-color: yellow;
+}
+
+#left-nav {
+    padding-top: 17%;
+    padding-bottom: 17%;
+    background-color: yellow;
+    float: left;
+    width: 15%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#main-content {
+    position: relative;
+    left: 15%;
+    width: 70%;
+    text-align: center;
+}
