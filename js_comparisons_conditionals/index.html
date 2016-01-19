@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        //declare variables
+        var mySmallNumber = 5;
+        var myString = "5";
+        var myBigNumber = 255;
+
+        var output1, output2, output3, output4;
+
+        //compare variables
+        output1 = (mySmallNumber == myString);
+        output2 = (mySmallNumber === myString);
+        output3 = (mySmallNumber < myBigNumber);
+        output4 = (mySmallNumber > myBigNumber);
+
+        //output comparisons
+        console.log("My output1 =", output1);
+        console.log("My output2 =", output2);
+        console.log("My output3 =", output3);
+        console.log("My output4 =", output4);
+
+        //guessing game start
+        var gameNumber = 64;
+        var userInput1 = 44;
+        var userInput2 = 64;
+
+        if ((userInput1 > 100) || (userInput1 < 1)) {
+            console.log("Out of bounds!");
+        }
+        else if (userInput1 > gameNumber) {
+            console.log("Too high!");
+        }
+        else if (userInput1 < gameNumber) {
+            console.log("Too low!");
+        }
+        if (userInput2 == gameNumber) {
+            console.log("Correct number guessed!");
+        }
+        else {
+            console.log("Try again!");
+        }
+
+        switch(true){
+            case (userInput1 == gameNumber):
+                console.log("Correct!");
+                break;
+            case ((userInput1 < gameNumber) && ((userInput1 >= (gameNumber -10)))):
+                console.log("Low but warm!");
+                break;
+            case ((userInput1 > gameNumber) && ((userInput1 <= (gameNumber +10)))):
+                console.log("High but warm!");
+                break;
+            case ((userInput1 < gameNumber) && ((userInput1 >= (gameNumber -25)))):
+                console.log("Low and cold!");
+                break;
+            case ((userInput1 > gameNumber) && ((userInput1 <= (gameNumber +25)))):
+                console.log("Low and cold!");
+                break;
+            default:
+                console.log("Way off.");
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
