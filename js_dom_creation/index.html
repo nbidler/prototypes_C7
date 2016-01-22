@@ -70,6 +70,13 @@
             content1.append(content2, content3, content4);
 
             $("#playground3").append(content1);
+
+            content1 = $("<figure>").addClass('awesome_picture');
+            content2 = $("<img>").attr("src", "http://comerecommended.com/wp-content/uploads/2013/01/how-to-get-awesome-back.jpg");
+            content3 = $("<figcaption>").html('That\'s right, <span class="bold_text">you are</span>');
+            content1.append(content2, content3);
+
+            $("#playground3").append(content1);
         });
     </script>
 </head>
