@@ -41,19 +41,20 @@
     <script>
         $(document).ready(function () {
             //playground 1 code
-            var val1 = $(".playground_source:nth-of-type(1)").html();
+            //improved effciency - eliminated redundant vars (previously one for each playground)
+            var content = $(".playground_source:nth-of-type(1)").html();
             //console.log(val1);
-            $("#playground1").append(val1);
+            $("#playground1").append(content);
 
             //playground 2 code
-            var val2 = $(".playground_source:nth-of-type(3)").html();
+            content = $(".playground_source:nth-of-type(3)").html();
             //console.log(val2);
-            $("#playground2").append(val2);
+            $("#playground2").append(content);
 
             //playground 3 code
-            var val3 = $(".playground_source:nth-of-type(5)").html();
-            console.log(val3);
-            $("#playground3").append(val3);
+            content = $(".playground_source:nth-of-type(5)").html();
+            //console.log(val3);
+            $("#playground3").append(content);
         });
     </script>
 </head>
