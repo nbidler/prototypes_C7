@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        input[type="text"]{
+            background-color: lawngreen;
+            font-family: "Lucida Sans";
+            border-color: rebeccapurple;
+            box-shadow: 1vmin 1vmin 2vmin orange;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://learningfuze.com/echo.php" method="get">
+        <p>Text</p>
+        <input type="text" name="text1">
+        <input type="text" name="text2">
+        <p>Radio</p>
+        <input type="radio" name="but" value="italian" checked>Italian
+        <input type="radio" name="but" value="chinese">Chinese
+        <input type="radio" name="but" value="chili">Chili
+        <p>Checkbox</p>
+        <input type="checkbox" name="game[]" value="shoot">Shootan Gaem
+        <input type="checkbox" name="game[]" value="build">Buildan Gaem
+        <input type="checkbox" name="game[]" value="think">Thinkan Gaem
+        <input type="checkbox" name="game[]" value="none" disabled>I don't play games
+        <p>Select Menu</p>
+        <select name="movie[]" multiple>
+            <option value="cars1">Cars</option>
+            <option value="cars2">Cars 2</option>
+            <option value="cars3">Cars 3</option>
+            <option value="best">Pacific Rim</option>
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
