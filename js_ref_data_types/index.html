@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        //declare array
+        var student_array = ['Al', 'Bill', 'Charles', 'David', 'Ernest'];
+
+        //declare object student
+        var student = {};
+        student.firstName = 'Nick';
+        student.lastName = 'Bidler';
+        student.age = 28;
+        student.school = 'LearningFuze';
+        student.questionList = [];
+        student.hasQuestion = false;
+
+        //student.greeting
+        //greeting takes 0 params, returns "Hello, my name is [First Name]"
+        student.greeting = function () {
+            return "Hello, my name is " + this.firstName;
+        }
+
+        //student.aboutMe
+        //greeting takes 0 params, returns "My full name is [your first and last name],
+        // I am [age] years old and I am a student at [school name]."
+        student.aboutMe = function () {
+            return ('My full name is ' + this.firstName + ' ' + this.lastName + ', I am ' + this.age + ' years old and I am a student at ' + this.school + '.');
+        }
+
+        //student.askQuestion
+        //askQuestion takes 1 param - question
+        //adds question to the questionList
+        //switches hasQuestion to True
+        //returns "A question has been added to your list"
+        student.askQuestion = function (question) {
+            this.questionList.push(question);
+            this.hasQuestion = true;
+            return "A question has been added to your list";
+        }
+
+        //student.answerQuestion
+        //askQuestion takes 0 params
+        //if hasQuestion is True
+        //  sets hasQuestion to False, returns the last question in questionList
+        //if hasQuestion is False
+        //  returns "You have no pending questions"
+        //returns "A question has been added to your list"
+        student.answerQuestion = function (question) {
+            if (this.hasQuestion) {
+                this.hasQuestion = false;
+                return this.questionList.pop();
+            }
+            else {
+                return "You have no pending questions";
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
