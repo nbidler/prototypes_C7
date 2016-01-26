@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @media screen and (max-width: 375px) {
+            main{
+                width: 80%;
+            }
+            #title {
+                font-size:0.8em
+            }
+            h2 {
+                text-align: center;
+                font-size:1em;
+            }
+            ol {
+                padding: 0;
+                font-size:0.1em;
+            }
+            p {
+                font-size: 0.1em;
+            }
+            section form div {
+                display: inline-block;
+                height: 10em;
+                width: 100%;
+                margin: 0 0;
+            }
+
+            #socsec{
+                width: 100%;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: darkred;
+            color: white;
+        }
+        main {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+        }
+        #title {
+            text-align: center;
+        }
+        ol {
+            padding: 0;
+        }
+        section {
+            display:block;
+        }
+        section div {
+            display: inline-block;
+            height: 30vh;
+            width: 40%;
+            margin: 0vh 2vw;
+        }
+        section div input{
+            text-align: left;
+            padding-left: 5%;
+            color: grey;
+            display: block;
+            height: 20%;
+            width: 100%;
+            margin-top: 5%;
+            border-color: orange;
+        }
+
+        #socsec{
+            width: 50%;
+        }
+        input, button {
+            box-shadow: 0vmin 1vmin 2vmin black;
+        }
+        button{
+            position: relative;
+            float: right;
+            margin-top: 5%;
+            border: 0;
+            color: white;
+            background-color: #6b0100;
+            height: 7vh;
+            width: 20vw;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <h2 id="title">GRUNDLE FRUNDLE</h2>
+            <ol>
+                <li>the word 'bongo' just over and over until your eyes bleed the word 'bongo' just over and over until your eyes bleed the word 'bongo' just over and over until your eyes bleed the word 'bongo' just over and over until your eyes bleed the word 'bongo' just over and over until your eyes bleed </li>
+                <li>the word 'bongo' just over and over until your eyes bleed the word 'bongo' just over and over until your eyes bleed the word 'bongo' just over and over until your eyes bleed the word 'bongo' just over and over until your eyes bleed </li>
+                <li>the word 'bongo' just over and over until your eyes bleed the word 'bongo' just over and over until your eyes bleed </li>
+                <li>the word 'bongo' just over and over until your eyes bleed the word 'bongo' just over and over until your eyes bleed the word 'bongo' just over and over until your eyes bleed the word 'bongo' just over and over until your eyes bleed </li>
+            </ol>
+            <p>trumbo hong kong net bwana</p>
+            <h2>Applicant Data</h2>
+        </article>
+        <section>
+            <form action="http://learningfuze.com/echo.php" method="get" id="form1">
+                <div>
+                    <input type="text" name="text1" value="Last Name, First Name, MI">
+                    <input type="text" name="text2" value="City, State, Zip, County">
+                    <input type="text" name="text3" value="Intended major at University">
+                </div>
+                <div>
+                    <input id="socsec" type="text" name="text4" value="Social Security #">
+                    <input type="text" name="text5" value="Permanent Home Phone">
+                    <input type="text" name="text6" value="At which location will you be attending?">
+                </div>
+            </form>
+        </section>
+        <button type="submit" form="form1" value="Submit">Next >
+    </main>
+</body>
+</html>
