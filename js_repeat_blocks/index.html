@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        //FS1 start
+        //declare vars
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        //output array to console
+        //ascending order
+        for (var i = 0; i < numbers.length; i++)
+        {
+            console.log(numbers[i]);
+        }
+        //descending order
+        for (var i = numbers.length-1; i >= 0; i--)
+        {
+            console.log(numbers[i]);
+        }
+        //ascending order, odd only
+        for (var i = 0; i < numbers.length; i++)
+        {
+            //check for odd
+            if (0 != numbers[i] %2)
+            {
+                console.log(numbers[i]);
+            }
+        }
+
+        //different array
+        var mixedArray = [4, 56, 11, 13, 97, 22, 7, 36, 19, 5, 8, 10];
+        //ascending order, odd only
+        for (var i = 0; i < mixedArray.length; i++)
+        {
+            if (0 != mixedArray[i] %2)
+            {
+                console.log(mixedArray[i]);
+            }
+        }
+
+        //
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
