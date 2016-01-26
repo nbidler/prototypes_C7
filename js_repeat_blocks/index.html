@@ -43,9 +43,32 @@
 
         for (var i in classRoom)
         {
+            //VALUABLE LESSON
+            //classroom[i] will give the value in the property
+            //i by itself give the property name
             console.log(classRoom[i] + " is at " + i);
         }
 
+        //FS3 start
+        var studentArray = [{name: "Bob", grade: 87}, {name: "Fred", grade: 82},
+            {name: "George", grade: 93}, {name: "Robert", grade: 85}];
+
+        //findStudent - takes 1 param (student's name)
+        //if found, returns name and grade - if not, says so.
+        var findStudent = function(sName) {
+            var i = 0;
+            while (i < studentArray.length)
+            {
+                //if found, return name and grade
+                if (sName == studentArray[i].name)
+                {
+                    return "Found "+ sName +" their grade is: "+ studentArray[i].grade +".";
+                }
+                //increment
+                i++;
+            }
+            return "Student "+ sName +" not found.";
+        }
     </script>
 </head>
 <body>
