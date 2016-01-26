@@ -8,6 +8,7 @@ Exactly what I thought it would.
 The parent handles all clicks on its child the same way, ergo, even if a new child
 is put in at 'compile time,' it s still handled the same.
 */
+
 //========== Write your code below ===========//
 
 $(document).ready(function() {
