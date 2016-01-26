@@ -14,7 +14,12 @@ is put in at 'compile time,' it s still handled the same.
 $(document).ready(function() {
     $('#list').on('click', 'button', function () {
         console.log($(this).text());
+        if ($(this).attr("name")){
+            console.log("SCREEEECH");
+        }
     });
 
-    $('#list').append("<li><button style='margin-top: 10px'>Delegated Button#5 Handler</button></li>");
+    $('#list').append("<li><button style='margin-top: 10px' name='gronk'>Delegated Button #5 Handler</button></li>");
+    $('#list').append("<li><button style='margin-top: 10px'>Delegated Button #6 Handler</button></li>");
+    $('#list').append("<li><a href='http://www.google.com' target='_blank'><button style='margin-top: 10px'>Throw to Google</button></a></li>");
 });
