@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        //FS1 start
+        //declare vars
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        //output array to console
+        //ascending order
+        for (var i = 0; i < numbers.length; i++)
+        {
+            console.log(numbers[i]);
+        }
+        //descending order
+        for (var i = numbers.length-1; i >= 0; i--)
+        {
+            console.log(numbers[i]);
+        }
+        //ascending order, odd only
+        for (var i = 0; i < numbers.length; i++)
+        {
+            //check for odd
+            if (0 != numbers[i] %2)
+            {
+                console.log(numbers[i]);
+            }
+        }
+
+        //different array
+        var mixedArray = [4, 56, 11, 13, 97, 22, 7, 36, 19, 5, 8, 10];
+        //ascending order, odd only
+        for (var i = 0; i < mixedArray.length; i++)
+        {
+            if (0 != mixedArray[i] %2)
+            {
+                console.log(mixedArray[i]);
+            }
+        }
+
+        //FS2 start
+        var classRoom = {desk1: 'Stu', desk2: 'Peggy', desk3: 'LoneStar', desk4: 'George', desk5: 'Sheldon'};
+
+        for (var i in classRoom)
+        {
+            //VALUABLE LESSON
+            //classroom[i] will give the value in the property
+            //i by itself give the property name
+            console.log(classRoom[i] + " is at " + i);
+        }
+
+        //FS3 start
+        var studentArray = [{name: "Bob", grade: 87}, {name: "Fred", grade: 82},
+            {name: "George", grade: 93}, {name: "Robert", grade: 85}];
+
+        //findStudent - takes 1 param (student's name)
+        //if found, returns name and grade - if not, says so.
+        var findStudent = function(sName) {
+            var i = 0;
+            while (i < studentArray.length)
+            {
+                //if found, return name and grade
+                if (sName == studentArray[i].name)
+                {
+                    return "Found "+ sName +" their grade is: "+ studentArray[i].grade +".";
+                }
+                //increment
+                i++;
+            }
+            return "Student "+ sName +" not found.";
+        }
+
+        //EXTRA
+        //find score
+        var findScore = function(sScore) {
+            var i = 0;
+            while (i < studentArray.length)
+            {
+                //if found, return name and grade
+                if (sScore == studentArray[i].grade)
+                {
+                    return "Found "+ sScore +" student is: "+ studentArray[i].name +".";
+                }
+                //increment
+                i++;
+            }
+            return "Score "+ sScore +" not found.";
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
