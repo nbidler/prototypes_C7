@@ -2,4 +2,4 @@
 ### Introduction
 
 >#### Instructions can be found <a href="http://learning-fuze.github.io/prototypes_C7/#/PHP-Intro" target="_blank">HERE</a>
->#### Available 3/03/2016 @ 12:00pm
+>#### Available 3/03/2016 @ 11:00am
