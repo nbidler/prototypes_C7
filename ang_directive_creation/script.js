@@ -42,3 +42,21 @@ app.factory('boardServ', function($log){
     };
     return retObj;
 });
+
+app.directive('gameController', function(){
+   return {
+       restrict: 'E',
+       templateUrl: 'game-board-template.html',
+       controller: function(boardServ) {
+           this.boardArray = boardServ.buildBoardArr();
+       },
+       controllerAs: 'gc'
+   }
+});
+
+app.directive('infoBar', function(){
+    return {
+        restrict: 'E',
+        templateUrl: 'info-bar-template.html',
+    }
+});

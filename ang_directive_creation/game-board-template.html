@@ -1,1 +1,7 @@
 <!--HTML for game board goes here-->
+<div class="board-container container">
+    <div class="row" ng-repeat="entry in gc.boardArray">
+        <div ng-repeat="item in entry" id="{{ item.id }}" class="{{ item.class }}" style="{{ item.style }}">
+        </div>
+    </div>
+</div>
