@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular DOM and Events</title>
+    <!-- Add Angular CDN below -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+</head>
+<body ng-app>
+    <div ng-init="gronk=true;counter = 0">
+        <span ng-hide="gronk">enabled</span>
+        <span ng-show="gronk">disabled</span>
+        <button ng-disabled="gronk" ng-click="counter = counter + 1">Gronk!</button>
+        <input type="checkbox" ng-model="gronk">
+        <p>Click number {{ counter }}</p>
+    </div>
+</body>
+</html>
