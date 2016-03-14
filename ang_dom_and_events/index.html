@@ -6,13 +6,97 @@
     <!-- Add Angular CDN below -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 </head>
-<body ng-app>
-    <div ng-init="gronk=true;counter = 0">
-        <span ng-hide="gronk">enabled</span>
-        <span ng-show="gronk">disabled</span>
-        <button ng-disabled="gronk" ng-click="counter = counter + 1">Gronk!</button>
-        <input type="checkbox" ng-model="gronk">
-        <p>Click number {{ counter }}</p>
+<body ng-app="myApp">
+
+<div ng-controller="formController as fc" ng-init="counter = fc.maxLength; notMax=true">
+    <input type="text" ng-model="fc.form.fName">
+    <input type="text" ng-model="fc.form.lName">
+    <input type="text" ng-model="fc.form.email">
+    <input type="textarea" ng-model="fc.form.comments" ng-disabled="!notMax"
+           ng-change="counter = fc.charsAvail(); notMax = fc.anyCharsLeft()">
+    <button ng-click="fc.addForm(); notMax=true; counter = fc.charsAvail();">add</button>
+
+    <p>Left: {{counter}}</p>
+
+    <div ng-controller="tableController as tc">
+        <p>Entries: {{tc.totalEntries()}}</p>
+        <table >
+            <tbody>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Comments</th>
+            </tr>
+            <tr ng-repeat="form in formArray">
+                <td>{{ form.fName + ' ' + form.lName }}</td>
+                <td>{{ form.email }}</td>
+                <td>{{ form.comments }}</td>
+                <td><button ng-click="tc.removeForm($index)">Delete</button></td>
+            </tr>
+            <tr ng-change="">
+                <td>{{ fc.form.fName + ' ' + fc.form.lName }}</td>
+                <td>{{ fc.form.email }}</td>
+                <td>{{ fc.form.comments }}</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
+
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('formController', function($scope){
+        this.maxLength = 25;
+        this.form = {};
+        $scope.formArray = [
+            {fName: "Mavrick",
+                lName: "Goose",
+                email: "Avionics 101",
+                comments: "95"},
+            {fName: "Goose",
+                lName: "Mavrick",
+                email: "Acting 95",
+                comments: "64"}
+        ];
+
+        this.addForm = function(){
+            $scope.formArray.push(this.form);
+            this.form = {};
+
+        };
+
+        /*this.removeForm = function(index){
+            console.log(this.formArray);
+            $scope.formArray.splice(index,1);
+            console.log(this.formArray);
+        };*/
+
+        this.charsAvail = function()
+        {
+            if(this.form.comments === undefined){return this.maxLength}
+            return (this.maxLength - this.form.comments.length);
+        };
+
+        this.anyCharsLeft = function()
+        {
+            if (this.charsAvail() > 0){
+                return true;
+            }
+            return false;
+        };
+    });
+
+    app.controller('tableController', function($scope){
+        this.removeForm = function(index){
+            $scope.formArray.splice(index,1);
+        };
+
+        this.totalEntries = function(index){
+            console.log($scope.formArray.length);
+            return $scope.formArray.length;
+        };
+    });
+</script>
 </body>
 </html>
