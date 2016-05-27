@@ -2,4 +2,4 @@
 ### Services Creation
 
 >#### Instructions can be found <a href="http://learning-fuze.github.io/prototypes_C8/#/AngularJS-Services-Creation" target="_blank">HERE</a>
->#### Available 5/27/2016 @ 12:00am
+>#### Available 5/27/2016 @ 12:00pm
