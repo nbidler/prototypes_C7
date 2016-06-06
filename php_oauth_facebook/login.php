@@ -1,16 +1,12 @@
 <?php
-session_start();
-require_once('facebook_info.php');
-require_once 'libraries/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
-$fb = new Facebook\Facebook([
-  'app_id' => FACEBOOK_APP_ID, // Replace {app-id} with your app id
-  'app_secret' => FACEBOOK_SECRET,
-  'default_graph_version' => 'v2.2',
-  ]);
+//start your session
+//make sure to include your facebook credentials!
+//then you'll need to include the facebook sdk
+//create a new facebook object
 
-$helper = $fb->getRedirectLoginHelper();
+//make a redirect helper handler
 
-$permissions = ['email']; // Optional permissions
-$loginUrl = $helper->getLoginUrl('https://danielpaschal.com/fb-callback.php', $permissions);
+//specify the permissions this app will need, putting them into an array
+//generate the login url
 ?>
-<a href="<?=htmlspecialchars($loginUrl);?>">Log in with Facebook!</a>
+<!--craft the a link for the user to log into facebook to grant your app authorization-->
