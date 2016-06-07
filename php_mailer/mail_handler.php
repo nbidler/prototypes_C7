@@ -21,11 +21,11 @@ $options = array(
     )
 );
 $mail->smtpConnect($options);
-$mail->From = 'daniel.paschal@learningfuze.com';
-$mail->FromName = 'Daniel Paschal';
-$mail->addAddress('daniel.paschal@learningfuze.com', 'Daniel');     // Add a recipient
+$mail->From = 'example@gmail.com';//your email sending account
+$mail->FromName = 'example name';//your email sending account name
+$mail->addAddress(/*your email address, or the email the sender if you are sending confirmation*/, /*email address user name*/);     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
-$mail->addReplyTo('daniel.paschal@learningfuze.com', 'Dan');
+$mail->addReplyTo(/*email address of the person sending the message, so you can reply*/);
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 
