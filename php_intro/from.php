@@ -15,55 +15,64 @@ $variable1 = 'hello';
 $numbers = [3, 5, 16, 3, 4, 18];
 $result = $numbers[0];
 
-for($i = 1; $i < count( $numbers); $i++)
+for($i = 1; $i < count($numbers); $i++)
 {
     $result += $numbers[$i];
 }
 
-echo 'Result = '.$result;
+print('Result = ' . $result);
+print("<br>");
 
 //EXERCISE 4 
 
 print('This is a string' . 'This is another string');
+print("<br>");
 
 //EXERCISE 5
 
 $my_float = 3.5;
-$my_int = (int)$my_float;
+$my_int = round($my_float);
 $my_float2 = 5.3;
-$my_int2 = intval($my_float2);
+$my_int2 = round($my_float2);
 
 //EXERCISE 6
 
 $my_var1 = 'Hello';
 
-if(isset($my_var2)){
-    echo $my_var2;
+if(!empty($my_var2)){
+    echo($my_var2);
 }
 else
 {
-    echo $my_var1;
+    echo($my_var1);
 }
+print("<br>");
 
 //EXERCISE 7
 
 $check_var = "What time is it?";
 
-switch($check_var){
+switch($check_var) {
     case 'hello':
-        print('greetings');
+        echo('greetings');
         break;
     case 'bye':
-        print('good bye');
+        echo('good bye');
         break;
     default:
-        print('It\'s party time!');
+        echo('It\'s party time!');
         break;
 }
+print("<br>");
 
 //EXERCISE 8
 
-$student = ['name'=>'Skippy', 'class'=>'English', 'grade'=>75];
+class student
+{
+    public $name = 'Skippy';
+    public $class = 'English';
+    public $grade = 75;
+}
 
 //EXERCISE 9
 
@@ -86,11 +95,11 @@ function find_greatest_num_and_index($direction)
     {
         $i = 0;
         $increment = 1;
-        $end_loop = count($num_array);
+        $end_loop = count($num_array) -1;
     }
     else
     {
-        $i = count($num_array);
+        $i = count($num_array) -1;
         $increment = -1;
         $end_loop = 0;
     }
@@ -104,11 +113,10 @@ function find_greatest_num_and_index($direction)
         }
         $i += $increment;
     }
-    return ['greatest' => $greatest,
-        'greatest_index' => $greatest_index
-    ];
+
+    return array("greatest" => $greatest, "greatest_index" => $greatest_index);
 }
 
-find_greatest_num_and_index(1);
+var_dump(find_greatest_num_and_index(1));
 
 ?>
