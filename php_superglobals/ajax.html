@@ -1,0 +1,29 @@
+<head>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script>
+        function doAjax(checkBoxVal, textareaVal)
+        {
+            $.ajax({
+                url: 'index.php',
+                method: 'post',
+                dataType: 'text',
+                data: {
+                    checkName: checkBoxVal.val(),
+                    checkState: checkBoxVal.prop('checked'),
+                    text: textareaVal
+                },
+                success: function(response){
+                    console.log(response);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<form>
+    <input type="checkbox" value="howdy">
+    <textarea>asdfasdf</textarea>
+    <button type="button" onclick="doAjax($(':checkbox') , $('textarea').val())">Pres Butan</button>
+</form>
+</body>
+

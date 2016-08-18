@@ -1,0 +1,20 @@
+<form action="index.php" method="post">
+    <input type="text" name="name" id="my_name">
+    <select name="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select>
+    <input placeholder="favorite fruit" name="fav_fruit[]">
+    <input placeholder="favorite fruit" name="fav_fruit[]">
+    <input placeholder="favorite fruit" name="fav_fruit[]">
+    <input type="submit">
+</form>
+
+<!--
+GET method
+Array ( [name] => asdf [gender] => Male [fav_fruit] => Array ( [0] => asss [1] => ssssd [2] => dfff ) ) array(0) { }
+
+POST method
+Array ( ) array(3) { ["name"]=> string(4) "asdf" ["gender"]=> string(4) "Male" ["fav_fruit"]=> array(3) { [0]=> string(4) "ASAS" [1]=> string(5) "SDSDS" [2]=> string(5) "DFDFD" } }
+-->
