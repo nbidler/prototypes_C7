@@ -1,0 +1,40 @@
+img + p {
+    font-size: 12px;
+}
+
+ul + h2 {
+    color:darkred;
+}
+
+.index {
+    text-align: center;
+}
+
+img {
+    float: left;
+}
+
+.nav li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+#header {
+    font-family: Montserrat;
+}
+
+#experience-list {
+     background-color: aqua;
+     list-style: hebrew;
+}
+
+#experience-list ul li{
+    list-style: hiragana;
+}
+
+#skills-list ul li {
+    color: blueviolet;
+}

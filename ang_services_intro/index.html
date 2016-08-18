@@ -5,8 +5,28 @@
     <title>Angular Services Intro</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 </head>
-<body>
-
+<body ng-app="gronk">
+    <div ng-controller="gronkControl as gc">
+        <input type="text" ng-model="gc.searchTerm">
+        <!--<p>{{ gc.searchTerm }}</p>-->
+        <button ng-click="gc.getData()">Get Data!</button>
+        <table ng-if="gc.data">
+            <tbody>
+            <tr>
+                <th></th>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Image</th>
+            </tr>
+            <tr ng-repeat="song in gc.data">
+                <td>{{ $index + 1 }}</td>
+                <td>{{ song.trackName }}</td>
+                <td>{{ song.artistName }}</td>
+                <td><img ng-src="{{song.artworkUrl60}}" alt=""></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 <script src="script.js"></script>
 </body>
 </html>
