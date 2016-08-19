@@ -1,4 +1,5 @@
 // Answer the questions here:
+<<<<<<< HEAD
 /*
 // - What do you think is going to happen?
 I think it will output "Delegated Button#5 Handler" to the console
@@ -23,3 +24,14 @@ $(document).ready(function() {
     $('#list').append("<li><button style='margin-top: 10px'>Delegated Button #6 Handler</button></li>");
     $('#list').append("<li><a href='http://www.google.com' target='_blank'><button style='margin-top: 10px'>Throw to Google</button></a></li>");
 });
+=======
+
+// - What do you think is going to happen?
+
+// - What happened?
+
+// - Why?
+
+//========== Write your code below ===========//
+
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a

@@ -1,4 +1,5 @@
 // Create the route module and name it routeApp
+<<<<<<< HEAD
 var app = angular.module('routeApp', ['ngRoute']);
 app.controller('routeCtrl', function($scope){
     $scope.message = "Lorem Squigson";
@@ -23,11 +24,23 @@ app.config(function($routeProvider) {
         controller: 'subBCtrl'
     })
 });
+=======
+
+// Config the routes
+
+         // route for the home page
+
+        // route for the about page
+
+        // route for the contact page
+
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a
 
 // Create the controllers for the different pages below
 
 // home page controller
     // Create a message to display in the view
+<<<<<<< HEAD
 app.controller('mainCtrl', function($scope){
     $scope.message = "Home Page 1!";
 });
@@ -43,3 +56,12 @@ app.controller('subACtrl', function($scope){
 app.controller('subBCtrl', function($scope){
     $scope.message = "Contact Page 3!";
 });
+=======
+
+
+// about page controller
+    // Create a message to display in the view
+
+// contact page controller
+    // Create a message to display in the view
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a

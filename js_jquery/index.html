@@ -8,12 +8,17 @@
     <!-- This should always be before your script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+<<<<<<< HEAD
         var count = 1; // A counter variable to be used in Feature Set 3
+=======
+        var count = 0; // A counter variable to be used in Feature Set 3
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a
 
         $(document).ready(function(){
             //Here are some examples using jQuery
             //.addClass is used to add a class to any element
             //here we are targeting the div1 element
+<<<<<<< HEAD
             $("#div1").addClass("pink"); //change the word red to pink *note these classes have already been created in the CSS file
 
             //.click is like using the onclick attribute we used before
@@ -21,6 +26,15 @@
             $("#div1").click(function() {
                 console.log("You clicked div 1, It is pink"); //Fix the output to reflect div1's new color
                 $(this).html('Click Count ' + count++);
+=======
+            $("#div1").addClass("red"); //change the word red to pink *note these classes have already been created in the CSS file
+
+            //.click is like using the onclick attribute we used before
+            //It creates an event handler for when div1 is clicked
+            $("#div1").click(function(){
+                console.log("You clicked div 1, It is red"); //Fix the output to reflect div1's new color
+
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a
             });
 
             //Here is another .click example that changes the color of the div every time you click on it
@@ -30,6 +44,7 @@
                 //Here is an if statement that outputs the color of div2 to the console when it is clicked
                 if($("#div2").hasClass("green")){
                     //If it has the class "green" then it will output "I am Green!"
+<<<<<<< HEAD
                     $(this).html("I'm Green");
                 }else{
                     //else it does not have the class "green" then it will output "I am White!"
@@ -47,6 +62,18 @@
             $("#div4").click(function() {
                 $(this).toggleClass("path");
             });
+=======
+                    console.log("I am Green!");
+                }else{
+                    //else it does not have the class "green" then it will output "I am White!"
+                    console.log("I am White!");
+                }
+            });
+            //----Write your code bellow----//
+
+
+
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a
             //----Write your code above----//
         });
     </script>

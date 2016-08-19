@@ -1,11 +1,16 @@
 //EXERCISE 1
+<<<<<<< HEAD
 var var1='hello';
 var var2=4;
 var var3=['foo', 'bar'];
+=======
+
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a
 
 
 //EXERCISE 2
 
+<<<<<<< HEAD
 var var11=4;
 var11='hello';
 
@@ -57,30 +62,55 @@ switch(check_var){
         break;
 }
 
+=======
+
+
+//EXERCISE 3
+
+
+
+//EXERCISE 4
+
+
+
+//EXERCISE 5
+
+
+
+//EXERCISE 7
+
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a
 
 
 //EXERCISE 8
 
+<<<<<<< HEAD
 var student = {
     name:'Skippy',
     class:'English',
     grade:75
 
 };
+=======
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a
 
 
 //EXERCISE 9
 
+<<<<<<< HEAD
 function stdClass(){
     this.name = 'Skippy';
     this.class = 'English';
     this.grade = 75;
 
 }
+=======
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a
 
 
 //EXERCISE 10
 
+<<<<<<< HEAD
 var num_array = [35,2,14,56,65,52];
 var i;
 var increment;
@@ -110,3 +140,6 @@ function find_greatest_num_and_index(direction){
 
 }
 find_greatest_num_and_index(1);
+=======
+
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a

@@ -5,7 +5,11 @@ $(function ($) {
      */
     var submitBtn = $('#add-student-btn'),
         sgtTableElement = $('#student-table'),
+<<<<<<< HEAD
         firebaseRef = new Firebase("https://lfchallenge.firebaseio.com/students");
+=======
+        firebaseRef = new Firebase("https://lfchallenge.firebaseio.com/users/data");
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a
 
     /** Click handler to submit student information
      * Take values of the student-add-form
@@ -80,17 +84,23 @@ $(function ($) {
      * be edited when the #confirm-edit button is clicked
      */
     function studentEdit(studentFirebaseReference) {
+<<<<<<< HEAD
         var self = this;
+=======
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a
         var newName = $('#modal-edit-name').val(),
             newCourse = $('#modal-edit-course').val(),
             newGrade = $('#modal-edit-grade').val();
         console.log('student updated', 'newName: ', newName, 'newCourse: ', newCourse, 'newGrade: ', newGrade);
         // using the correct method, send the new student values to firebase to be updated
+<<<<<<< HEAD
         studentFirebaseReference.update({
             name: newName,
             course: newCourse,
             grade: newGrade
         });
+=======
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a
     }
 
     /** Click handler for modal confirm button */
@@ -100,7 +110,11 @@ $(function ($) {
         var studentFirebaseRef = firebaseRef.child($('#edit-modal').find('#student-id').val());
         // edit form click handler
         // Send the correct variable into the student edit function
+<<<<<<< HEAD
         studentEdit(studentFirebaseRef);
+=======
+
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a
         $("#edit-modal").modal('hide');
     });
 
@@ -119,7 +133,10 @@ $(function ($) {
             $('#' + rowId).remove();
         });
         // Delete the student with the correct firebase method
+<<<<<<< HEAD
         studentFirebaseRef.remove();
+=======
+>>>>>>> 92c6d68b0da2bccbee260893409728d9a7c7508a
     });
 
     /* Clear out inputs in the add-student-form */
