@@ -4,9 +4,9 @@ session_start();
 <!-- Session Setter -->
 <?php
 
-echo $_SESSION['errors']['name'];
-echo $_SESSION['errors']['age'];
-echo $_SESSION['errors']['occupation'];
+//echo $_SESSION['errors']['name'];
+//echo $_SESSION['errors']['age'];
+//echo $_SESSION['errors']['occupation'];
 
 $prev_name = ''; $err_name = '';
 
@@ -47,10 +47,13 @@ $_SESSION['errors']['occupation'] = '';
 
 
 <form action="session_reader.php">
+    <p>Name:</p>
     <input type="text" name="name" value=<?=$prev_name?>>
     <p><?= $err_name ?></p>
-    <input type="number" name="age" value=<?=$prev_age?>>
+    <p>Age:</p>
+    <input type="text" name="age" value=<?=$prev_age?>>
     <p><?= $err_age ?></p>
+    <p>Occupation:</p>
     <input type="text" name="occupation" value=<?=$prev_occupation?>>
     <p><?= $err_occupation ?></p>
     <input type="submit">
