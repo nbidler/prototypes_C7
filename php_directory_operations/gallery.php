@@ -4,10 +4,8 @@
 
     <script>
         function load_files() {
-            $.getJSON('get_images.php',,
-                function(data,status0){
-                    for (var i = 0; i < )
-                });
+            $.ajax({url: "get_images.php", success: function(result){
+                $('body').add();
         }
     </script>
 
