@@ -6,6 +6,8 @@ session_start();
 
 <script>
 
+    //convert all this JS to PHP - should be possible to regex check in PHP using preg_check
+
     var inName = '<?php print($_GET['name']); ?>';
 
     if (1+ inName.search(/^[A-Za-z]{1,} *[A-Za-z]*$/)){
@@ -21,6 +23,7 @@ session_start();
         console.log('name err ' + '<?php print($_GET['name']); ?>');
         <?php
         $_SESSION['errors']['name'] = $_GET['name'];
+        header('location: session_setter.php');
         ?>
     }
 
@@ -36,6 +39,7 @@ session_start();
         console.log('name err ' + '<?php print($_GET['name']); ?>');
         <?php
         $_SESSION['errors']['age'] = $_GET['age'];
+        header('location: session_setter.php');
         ?>
     }
 
@@ -53,13 +57,14 @@ session_start();
         console.log('name err ' + '<?php print($_GET['name']); ?>');
         <?php
         $_SESSION['errors']['occupation'] = $_GET["occupation"];
+        header('location: session_setter.php');
         ?>
     }
 
 </script>
 
 <?php
-header('location: session_setter.php');
+//header('location: session_setter.php');
 
 //    print('name: ');print($_GET['name'].'<br>');
 //    print('age: ');print($_GET['age'].'<br>');
