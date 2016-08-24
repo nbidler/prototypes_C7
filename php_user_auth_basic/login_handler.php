@@ -8,6 +8,8 @@ $user_info = [
     ['id'=> 3, 'username'=>'charlie', 'password' => 'charli']
 ];
 
+$output = [];
+
 $input_username = $_POST['username'];
 $input_password = $_POST['password'];
 $login_failed = true;
@@ -21,8 +23,10 @@ foreach ($user_info as $entry)
         {
             //password valid
             $_SESSION['user_id'] = $entry['id'];
-            $login_success = false;
-            print('successful login'."\n");
+            $login_failed = false;
+            $output['success'] = true;
+            $output['user_id'] = $entry['id'];
+            $output['message'] = 'successful login';
         }
         else
         {
@@ -34,9 +38,13 @@ foreach ($user_info as $entry)
         //username invalid
     }
 }
-if ($login_success)
+if ($login_failed)
 {
-    print('failed login'."\n");
+    $output['success'] = false;
+    $output['message'] = 'failed login';
 }
 
+$output_string = json_encode($output);
+
+print($output_string);
 ?>
