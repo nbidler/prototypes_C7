@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <title>js_regex</title>
     <script>
-        var fs1a = "hello".search(/[e]/);
+        var fs1a = "hello".search(/[e]/gm);
 
-        var fs1b = "HE entEred".search(/[e]/i);
+        var fs1b = "HE entEred".search(/[e]/igm);
 
-        var fs1c = "stir the star".search(/st.r/);
+        var fs1c = "stir the star".search(/st.r/gm);
 
-        var phoneNumber = "stir the star".search
-            (/1?[ -]?\(?[0-9]{3}\)?[ -]*[0-9]{3}[ -]*[0-9]{/);
+        var phoneNumber = "000 000 0000".search
+            (/1?[ -]?\(?[0-9]{3}\)?[ -]*[0-9]{3}[ -]*[0-9]{/gm);
+
+        var passwordRegex = "Password0".search
+        (/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-z]{1}[A-Za-z0-9]{5,31}$/gm);
     </script>
 </head>
 <body>
