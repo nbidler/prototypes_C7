@@ -1,5 +1,5 @@
 <?php
-require_once('emailconfig.php');
+require_once('email_config.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->SMTPDebug = 3;                               // Enable verbose debug output
@@ -23,9 +23,10 @@ $options = array(
 $mail->smtpConnect($options);
 $mail->From = 'example@gmail.com';//your email sending account
 $mail->FromName = 'example name';//your email sending account name
-$mail->addAddress(/*your email address, or the email the sender if you are sending confirmation*/, /*email address user name*/);     // Add a recipient
+$mail->addAddress(/*your email address, or the email the sender if you are sending confirmation*/stripslashes($_POST['email']),
+    /*email address user name*/stripslashes($_POST['name']));     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
-$mail->addReplyTo(/*email address of the person sending the message, so you can reply*/);
+$mail->addReplyTo(/*email address of the person sending the message, so you can reply*/stripslashes($_POST['email']));
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 
@@ -33,9 +34,9 @@ $mail->addReplyTo(/*email address of the person sending the message, so you can 
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+$mail->Subject = stripslashes($_POST['subject']);
+$mail->Body    = stripslashes($_POST['body']);
+$mail->AltBody = htmlentities(stripslashes($_POST['body']));
 
 if(!$mail->send()) {
     echo 'Message could not be sent.';
